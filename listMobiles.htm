@@ -1,0 +1,25 @@
+﻿<div ng-controller="listCtrl">
+        listing ...
+
+        <table border="1">
+            <tr>
+                <th style="width:35%; padding:3px;">Manufacturer</th>
+                <th style="width:15%; padding:3px;">Model</th>
+                <th style="width:15%; padding:3px;">Price</th>
+                <th style="width:15%; padding:3px;">Edit</th>
+                <th style="width:15%; padding:3px;">Delete</th>
+
+            </tr>
+
+            <tr ng-repeat="mobile in mobileList">
+                <td style="width:35%; padding:3px;">{{mobile.Manufacturer}}</td>
+                <td style="width:15%; padding:3px;">{{mobile.Model}}</td>
+                <td style="width:15%; padding:3px;">{{mobile.Price}}</td>
+                <td style="width:15%; padding:3px;"><a href="#Add/{{mobile}}">Edit</a></td>
+                <td style="width:15%; padding:3px;"><a ng-click="removeMobile(mobile._id.$oid)">Delete</a></td>
+
+            </tr>
+
+        </table>
+
+</div>
