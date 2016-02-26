@@ -1,6 +1,10 @@
-﻿<div ng-controller="listCtrl">
+<div ng-controller="listCtrl">
         listing ...
+        <br />
 
+        
+        <input type="text" style="width:30%" class="form-control" placeholder="Search mobile" ng-model="searchMobile">
+        <br />
         <table border="1">
             <tr>
                 <th style="width:35%; padding:3px;">Manufacturer</th>
@@ -11,7 +15,7 @@
 
             </tr>
 
-            <tr ng-repeat="mobile in mobileList">
+            <tr ng-repeat="mobile in mobileList | filter:searchMobile">
                 <td style="width:35%; padding:3px;">{{mobile.Manufacturer}}</td>
                 <td style="width:15%; padding:3px;">{{mobile.Model}}</td>
                 <td style="width:15%; padding:3px;">{{mobile.Price}}</td>
